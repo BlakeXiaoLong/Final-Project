@@ -1,4 +1,6 @@
 # Final-Project
 Java Project
 
-This may or may not be a game, and it may or may not be a Java port of TGUA (assuming I finish the C++ version)
+This is to be a game, the details are unknown right now (as are the opponents, plot, location, and basically everything else. Honestly, the only thing we've got so far is the name of the character.)
+
+More information to come as the project head comes up with it.
