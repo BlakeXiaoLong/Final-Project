@@ -7,6 +7,7 @@ I am Andrew Jimenez, project codehead; Along with me on this fateful
         
 Here goes nothing
 */
+
 package pkgfinal.project;
 import java.util.Scanner;
 public class FinalProject
@@ -23,7 +24,7 @@ public class FinalProject
                 + "a rather girlish man, to be quite frank.\n\n"
                 + "But no matter, you will become HUGE!\n"
                 + "(or fail the game, honestly, they're both the same to me)");
-        out("Press 1 to comtinue");
+        out("Press 1 to continue");
         if(menu() == 1)
             loading();
         else
@@ -35,7 +36,7 @@ public class FinalProject
     }
     public static int menu()
     {
-        turncounter++;       
+        turncounter++;    
         return userInput.nextInt();
     }
     
@@ -62,27 +63,28 @@ public class FinalProject
         userInput.nextLine(); // to eat the newline character
         String name = userInput.nextLine();
         if(name.equals("Bulk Squatthrust"))
-            out("\nGood Choice!");
+            out("\n\n\n\n\n\nGood Choice!");
         else
         {
-            out("\nNah, that's a stupid name.\n"
+            out("\n\n\n\n\n\nNah, that's a stupid name.\n"
                     + "You need a tough-sounding name\n"
                     + "like Tarkus or Blake or Jaune Ar-\n"
                     + "  wait no, that's a stupid one.\n\n"
-                    + "I know!\nHow about Bulk Squatthrust?\n"
+                    + "I know!\n"
+                    + "How about Bulk Squatthrust?\n"
                     + "(Y/N)");
             name = userInput.nextLine(); /* "warning: the assigned value is never used"
                                             Your point being? Silly Java,
                                             who would ever use the input they take from their users? */
         }
         
-        out("Yes, and what a glorious name it is.\n"
+        out("\n\n\n\n\n\nYes, and what a glorious name it is.\n"
                 + "You don't deserve it right now,\n"
                 + "but you will earn the right to call yourself 'Bulk'\n"
                 + "or HUGE!");
         pause(2);
         
-        out("Also, before we start, you should probably mention that you\n"
+        out("\n\nAlso, before we start, you should probably mention that you\n"
                 + "are poor and have no job.\n"
                 + "Also that you have a very loose sense of ethics,\n"
                 + "and aren't above the most heinous atrocities against mankind");
