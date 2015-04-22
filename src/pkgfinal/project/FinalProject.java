@@ -97,4 +97,76 @@ public class FinalProject
     {
         
     }
+    public static void M2()
+    {
+        
+    }
+    public static void M3()
+    {
+        
+    }
+    public static void M4_1()
+    {
+        
+    }
+    public static void M4_2()
+    {
+        
+    }
+    public static void M4_3()
+    {
+        
+    }
+    public static void M4_4()
+    {
+        
+    }
+    public static void M4_5()
+    {
+        
+    }
+    public static void M4_6()
+    {
+        
+    }
+    public static void M4_7()
+    {
+        
+    }
+    public static void M4_8()
+    {
+        
+    }
+    public static void M4_9()
+    {
+        
+    }
+    public static void M5_1()
+    {
+        
+    }
+    public static void M5_2()
+    {
+        
+    }
+    public static void M6()
+    {
+        
+    }
+    public static void M7()
+    {
+        
+    }
+    public static void M8()
+    {
+        
+    }
+    public static void M9()
+    {
+        
+    }
+    public static void M10()
+    {
+        
+    }
 }
