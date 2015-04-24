@@ -95,7 +95,12 @@ public class FinalProject
     
     public static void M1()
     {
-        
+        out("\n\nThere is a bottle of PILLZ on the desk before you.\n\n"
+            + "What shall you do?"
+            + "1. Excercise like a boss"
+            + "2. Take the PILLZ"
+            + "3. Wait");
+            userInput.nextLine();
     }
     public static void M2()
     {
