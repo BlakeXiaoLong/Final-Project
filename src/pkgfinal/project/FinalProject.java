@@ -97,9 +97,9 @@ public class FinalProject
     {
         out("\n\nThere is a bottle of PILLZ on the desk before you.\n\n"
             + "What shall you do?"
-            + "1. Excercise like a boss"
-            + "2. Take the PILLZ"
-            + "3. Wait");
+            + "\n1. Excercise like a boss"
+            + "\n2. Take the PILLZ"
+            + "\n3. Wait");
             userInput.nextLine();
     }
     public static void M2()
