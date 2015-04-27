@@ -38,13 +38,18 @@ public class FinalProject
     {
         turncounter++;    
         return userInput.nextInt();
-    }
-    
+    }    
     public static void pause(int x) // 1 eats a newline character before pausing, 2 does not
     {
         if(x == 1) userInput.nextLine();
         out("Press Enter to continue");
         userInput.nextLine();
+    }
+    public static void Wait()
+    {
+        out("You wait.\n"
+                + "I don't know why but you do.\n"
+                + "Because I hate campers, I kill you.\n");
     }
     
     public static void loading()
@@ -61,8 +66,7 @@ public class FinalProject
                 + "This will be the day we open up the do-\n\n"
                 + "Wait, What's your name again?");
         userInput.nextLine(); // to eat the newline character
-        String name = userInput.nextLine();
-        if(name.equals("Bulk Squatthrust"))
+        if(userInput.nextLine().equals("Bulk Squatthrust"))
             out("\n\n\n\n\n\nGood Choice!");
         else
         {
@@ -73,9 +77,9 @@ public class FinalProject
                     + "I know!\n"
                     + "How about Bulk Squatthrust?\n"
                     + "(Y/N)");
-            name = userInput.nextLine(); /* "warning: the assigned value is never used"
-                                            Your point being? Silly Java,
-                                            who would ever use the input they take from their users? */
+            userInput.nextLine(); /* "warning: the assigned value is never used"
+                                      Your point being? Silly Java,
+                                      who would ever use the input they take from their users? */
         }
         
         out("\n\n\n\n\n\nYes, and what a glorious name it is.\n"
@@ -100,7 +104,26 @@ public class FinalProject
             + "1. Excercise like a boss\n"
             + "2. Take the PILLZ\n"
             + "3. Wait");
-            userInput.nextLine();
+            switch(menu())
+            {
+                case 1:
+                    out("You try to buff up, but your limp arm noodles\n"
+                            + "are incapable of lifting anthing more than that\n"
+                            + "conveniently-placed bottle of PILLZ on the counter\n");
+                    M1();
+                    break;
+                case 2:
+                    out("After spending several minutes trying to open the PILLZ\n"
+                            + "you finally muster the strength to open them\n"
+                            + "and down half the container.\n\n"
+                            
+                            + "Kids: Don't try this at home\n");
+                    M1();
+                    break;
+                case 3:
+                    Wait();
+                    break;
+            }
     }
     public static void M2()
     {
