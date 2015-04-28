@@ -106,7 +106,7 @@ public class FinalProject
             + "3. Wait");
             switch(menu())
             {
-                case 1:
+                case 1: // have a way to react differently if the player has eaten the PILLZ
                     out("You try to buff up, but your limp arm noodles\n"
                             + "are incapable of lifting anthing more than that\n"
                             + "conveniently-placed bottle of PILLZ on the counter\n");
