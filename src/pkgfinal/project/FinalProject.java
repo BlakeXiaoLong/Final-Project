@@ -109,7 +109,11 @@ public class FinalProject
                 case 1: // have a way to react differently if the player has eaten the PILLZ
                     out("You try to buff up, but your limp arm noodles\n"
                             + "are incapable of lifting anthing more than that\n"
-                            + "conveniently-placed bottle of PILLZ on the counter\n");
+                            + "conveniently-placed bottle of PILLZ on the counter.\n\n"
+                            + "After several minutes trying to open the PILLZ\n"
+                            + "you finally muster the strength to open them\n"
+                            + "and down half the container.\n\n"
+                            + "Kids: Don't try this at home.\n");
                     M1();
                     break;
                 case 2:
@@ -117,7 +121,7 @@ public class FinalProject
                             + "you finally muster the strength to open them\n"
                             + "and down half the container.\n\n"
                             
-                            + "Kids: Don't try this at home\n");
+                            + "Kids: Don't try this at home.\n");
                     M1();
                     break;
                 case 3:
