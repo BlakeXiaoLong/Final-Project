@@ -32,4 +32,21 @@ public class Character
         this.hr = 0;
         this.exp = 0;
     }
+    
+    public long expToLevel(int level)
+    {
+        return (128*(long)(level^2));
+    }
+    
+    public boolean levelUp()
+    {
+        if(this.exp > expToLevel(this.level+1))
+        {
+            
+            return true;
+        }
+        return false;
+    }
+    
+    
 }
