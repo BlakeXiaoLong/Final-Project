@@ -1,10 +1,12 @@
 package pkgfinal.project;
+import java.util.Random;
 public class Character
 {
-    private String name;
-    private int level, hp, mhp, str, dex, con;
+    String name;
+    int level, hp, mhp, str, dex, con;
     double hr;
-    private long exp;
+    long exp;
+    Random rand = new Random();
     
     //Opponent constructor
     public Character(String name, int level, int mhp, int str, int dex, int con, double hr)
@@ -22,31 +24,67 @@ public class Character
     public Character()
     {
         this.name = "Bulk Squatthrust";
-        this.level = 0;
-        this.hp = 0;
-        this.mhp = 0;
-        this.str = 0;
-        this.dex = 0;
-        this.con = 0;
-        this.exp = 0;
-        this.hr = 0;
-        this.exp = 0;
+        this.level = 1;
+        this.hp = rand.nextInt(16)+15;
+        this.mhp = this.hp;
+        this.str = rand.nextInt(5)+30;
+        this.dex = rand.nextInt(5)+30;
+        this.con = rand.nextInt(5)+30;
+        this.exp = expToLevel(1);
+        this.hr = rand.nextInt(5)+60;
     }
     
-    public long expToLevel(int level)
+    /**
+     *
+     * @param level
+     * @return
+     */
+    private long expToLevel(long level)
     {
-        return (128*(long)(level^2));
+        return (128*level*level);
     }
     
     public boolean levelUp()
     {
         if(this.exp > expToLevel(this.level+1))
         {
-            
+            //Level Up
+            this.level++;
+            switch(rand.nextInt(3)+1)
+            {
+                case 1:
+                    this.str += 10;
+                    this.dex += 7;
+                    this.con += 7;
+                    this.mhp += 7;
+                    this.hp = this.mhp;
+                    break;
+                case 2:
+                    this.str += 7;
+                    this.dex += 10;
+                    this.con += 7;
+                    this.mhp += 7;
+                    this.hp = this.mhp;
+                    break;
+                case 3:
+                    this.str += 7;
+                    this.dex += 7;
+                    this.con += 10;
+                    this.mhp += 7;
+                    this.hp = this.mhp;
+                    break;
+                case 4:
+                    this.str += 7;
+                    this.dex += 7;
+                    this.con += 7;
+                    this.mhp += 10;
+                    this.hp = this.mhp;
+                    break;
+                default:
+                    break;
+            }
             return true;
         }
         return false;
     }
-    
-    
 }

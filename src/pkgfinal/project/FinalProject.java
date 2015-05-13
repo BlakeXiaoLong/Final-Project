@@ -50,8 +50,7 @@ public class FinalProject
         out("You wait.\n"
                 + "I don't know why but you do.\n"
                 + "Because I hate campers, I kill you.\n");
-    }
-    
+    }    
     public static void loading()
     {
         out("\n\n\n\n\n\nYou begin as a nameless peon, weak and frail\n"
@@ -92,29 +91,28 @@ public class FinalProject
                 + "are poor and have no job.\n"
                 + "Also that you have a very loose sense of ethics,\n"
                 + "and aren't above the most heinous atrocities against mankind");
-        
+        pause(2);
+        Character Bulk = new Character();
         // Now that that's done, we can move on
-        M1();
+        M1(Bulk);
     }
     
-    public static void M1()
+    public static void M1(Character Bulk)
     {
-        out("\n\nThere is a bottle of PILLZ on the desk before you.\n\n"
-            + "What shall you do?\n"
-            + "1. Excercise like a boss\n"
-            + "2. Take the PILLZ\n"
-            + "3. Wait");
+        if(Bulk.exp == 128)
+        {
+            out("\n\nThere is a bottle of PILLZ on the desk before you.\n\n"
+                    + "What shall you do?\n"
+                    + "1. Excercise like a boss\n"
+                    + "2. Take the PILLZ\n"
+                    + "3. Wait");
             switch(menu())
             {
-                case 1: // have a way to react differently if the player has eaten the PILLZ
+                case 1:
                     out("You try to buff up, but your limp arm noodles\n"
                             + "are incapable of lifting anthing more than that\n"
-                            + "conveniently-placed bottle of PILLZ on the counter.\n\n"
-                            + "After several minutes trying to open the PILLZ\n"
-                            + "you finally muster the strength to open them\n"
-                            + "and down half the container.\n\n"
-                            + "Kids: Don't try this at home.\n");
-                    M1();
+                            + "conveniently-placed bottle of PILLZ on the counter.");
+                    M1(Bulk);
                     break;
                 case 2:
                     out("After spending several minutes trying to open the PILLZ\n"
@@ -122,82 +120,129 @@ public class FinalProject
                             + "and down half the container.\n\n"
                             
                             + "Kids: Don't try this at home.\n");
-                    M1();
+                    Bulk.exp = 129;                    
+                    M1(Bulk);
                     break;
                 case 3:
                     Wait();
                     break;
+                default:
+                    out("Invalid Input\n");
+                    M1(Bulk);
+                    break;
             }
+        }
+        else if(Bulk.exp == 129)
+        {
+            out("You are in an empty house.\n"
+                    + "It isn't your's, you just broke in here\n"
+                    + "to feel sorry for yourself.\n\n"
+                    + "With the power of the PILLZ running though you\n"
+                    + "you feel like you could do anything!\n"
+                    + "You could bench press an empty milk carton\n"
+                    + "or lift your own body weight\n"
+                    + "What shall you do?\n"
+                    + "1. Excercise like a boss\n"
+                    + "2. Wait\n");
+            switch(menu())
+            {
+                case 1:
+                    out("You choose to exercise\n"
+                            + "and exercise you do.\n"
+                            + "With the power of a normal human being\n"
+                            + "and the longevity of a small child\n"
+                            + "you spend the next 90 seconds moving around the\n"
+                            + "house with the speed that would astound most snails\n");
+                    Bulk.exp = 130;
+                    M1(Bulk);
+                    break;
+                case 2:
+                    Wait();
+                    break;
+                default:
+                    out("Invalid Input\n");
+                    M1(Bulk);
+                    break;
+            }
+        }
+        else if(Bulk.exp == 130)
+        {
+            // dunno what to do here
+        }
+        else
+        {
+            out("How'd you manage to do that??\n");
+        }
     }
-    public static void M2()
+    public static void M2(Character Bulk)
     {
         
     }
-    public static void M3()
+    public static void M3(Character Bulk)
     {
         
     }
-    public static void M4_1()
+    public static void M4_1(Character Bulk)
     {
         
     }
-    public static void M4_2()
+    public static void M4_2(Character Bulk)
     {
         
     }
-    public static void M4_3()
+    public static void M4_3(Character Bulk)
     {
         
     }
-    public static void M4_4()
+    public static void M4_4(Character Bulk)
     {
         
     }
-    public static void M4_5()
+    public static void M4_5(Character Bulk)
     {
         
     }
-    public static void M4_6()
+    public static void M4_6(Character Bulk)
     {
         
     }
-    public static void M4_7()
+    public static void M4_7(Character Bulk)
     {
         
     }
-    public static void M4_8()
+    public static void M4_8(Character Bulk)
     {
         
     }
-    public static void M4_9()
+    public static void M4_9(Character Bulk)
     {
         
     }
-    public static void M5_1()
+    public static void M5_1(Character Bulk)
     {
         
     }
-    public static void M5_2()
+    public static void M5_2(Character Bulk)
     {
         
     }
-    public static void M6()
+    public static void M6(Character Bulk)
     {
         
     }
-    public static void M7()
+    public static void M7(Character Bulk)
     {
         
     }
-    public static void M8()
+    public static void M8(Character Bulk)
     {
         
     }
-    public static void M9()
+    public static void M9(Character Bulk)
     {
         
     }
-    public static void M10()
+    public static void M10(Character Bulk)
     {
         
     }
