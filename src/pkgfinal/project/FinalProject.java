@@ -165,10 +165,53 @@ public class FinalProject
                     break;
             }
         }
-        else if(Bulk.exp == 130)
+        else if(Bulk.exp == 130) // Ayy lmao, I wrote this bit, hope it doesn't suck too bad - Alex
         {
-            // dunno what to do here
-        }
+            out("A mysterious power grows within your body.\n"
+                    + "You don't know what it is or where it came from.\n\n"
+                    + "Is this what people call 'strength'?\n\n"
+                    + "There doesn't seem to be much left in this house for you to HUGE yourself with.\n"
+                    + "What now?\n"
+                    + "1. Excercise as much as humanly possible\n"
+                    + "2. Break through the wall\n"
+                    + "3. Wait\n");
+            switch(menu())
+            {
+                case 1:
+                    out("Feeling the need to gain more mass\n"
+                            + "you begin a rigorous bout of pushups, working\n"
+                            + "your arm muscles as long as you can.\n"
+                            + "Which is a little over one rep.\n"
+                            + "Barely managing to lift yourself off of\n"
+                            + "the ground, you feel no different than earlier.\n"
+                            + "Instead, you decide that leaving might be a good idea.\n"
+                            + "Feeling exhausted from excercise, you slowly\n"
+                            + "walk to the door and exit.\n");
+                    Bulk.exp = 131;
+                    M2(Bulk);
+                    break;
+                case 2:
+                    out("Feeling as though you could do\n"
+                            + "anything with this new power, you\n"
+                            + "you hurl yourself at the wall in\n"
+                            + "an attempt to break through it.\n"
+                            + "Your meager mass smashes against the \n"
+                            + "surface with a soft thud.\n"
+                            + "Tending to a bruised shoulder, you\n"
+                            + "decide that the door is a better\n"
+                            + "idea, and make your exit.");
+                    Bulk.exp = 131;
+                    M2(Bulk);
+                    break;
+                case 3:
+                    Wait();
+                    break;
+                default:
+                    out("Invalid Input\n");
+                    M1(Bulk);
+                    break;
+            }
+        } // Time for the next area boyz
         else
         {
             out("How'd you manage to do that??\n");
