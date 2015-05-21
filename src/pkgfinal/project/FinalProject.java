@@ -219,7 +219,7 @@ public class FinalProject
     }
     public static void M2(Character Bulk)
     {
-        
+        out("Lmao\n");
     }
     public static void M3(Character Bulk)
     {
