@@ -401,7 +401,19 @@ public class FinalProject
     }
     public static void M3_1(Character Bulk) // Alex, I defer to your Gurren Lagann reference powers here
     {
-        
+        out("\tThe HUGE woman grins a HUGE grin and looks toward the ground.\n"
+            + "When she looks up again she has red, V-shaped sunglasses on her face and one arm extended\n"
+            + "into the air, jabbing a finger at the heavens."
+            + "'You dumbass!' she yells. 'WHO THE HELL DO YOU THINK I AM?'\n\n"
+            + "At these words the woman begins to grow impossibly HUGE, her body stretching to the skies and continuing beyond.\n"
+            + "'MY HUGE IS THE HUGE THAT WILL PIERCE THE HEAVENS!'\n\n"
+            + "Your guts begin to churn and your sphincter loosens as you tremble before her might.\n"
+            + "The ground shakes violently and as you loose your grip on reality a giant glowing drill\n"
+            + "breaks through the ground beneath you. The drill rockets upwards, eviscerating you, despite your HUGE.\n\n"
+            + "As your world fades to black, you think you see a mighty, blue haired man floating above you.\n"
+            + "His words reach your ears just before you lose consciousness.\n\n"
+            + "'A true man never dies ... even when he's killed.'\n");
+        M3(Bulk); // I got you bro - Alex
     }
     public static void M3_2(Character Bulk)
     {
