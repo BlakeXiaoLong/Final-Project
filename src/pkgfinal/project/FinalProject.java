@@ -75,11 +75,12 @@ public class FinalProject
                 System.out.println();
         }
     }
-    public static void Wait()
+    public static void Wait(Character Bulk)
     {
         out("You wait.\n"
                 + "I don't know why but you do.\n"
                 + "Because I hate campers, I kill you.\n");
+        ded(Bulk);
     }
     public static void ded(Character Bulk)
     {
@@ -100,7 +101,7 @@ public class FinalProject
                 break;
             default:
                 out("Invalid Input\n"
-                        + "I'm gonna take that as a no.\n");
+                        + "So I'm gonna take that as a no.\n");
                 System.exit(0);
                 break;
                 
@@ -179,7 +180,7 @@ public class FinalProject
                     M1(Bulk);
                     break;
                 case 3:
-                    Wait();
+                    Wait(Bulk);
                     break;
                 default:
                     out("Invalid Input\n");
@@ -213,7 +214,7 @@ public class FinalProject
                     M1(Bulk);
                     break;
                 case 2:
-                    Wait();
+                    Wait(Bulk);
                     break;
                 default:
                     out("Invalid Input\n");
@@ -258,7 +259,7 @@ public class FinalProject
                     M2(Bulk);
                     break;
                 case 3:
-                    Wait();
+                    Wait(Bulk);
                     break;
                 default:
                     out("Invalid Input\n");
@@ -289,13 +290,15 @@ public class FinalProject
                         + "he falls, and you see that he is merely a child\n"
                         + "Perhaps you should HUGE yourself more before\n"
                         + "you try to fight again\n");
+                M2_2(Bulk);
                 break;
             case 2:
                 out("You allow him to live...\n"
                         + "for now.\n");
+                M2_2(Bulk);
                 break;
             case 3:
-                Wait();
+                Wait(Bulk);
                 break;
             default:
                 out("Invalid Input\n");
@@ -305,7 +308,59 @@ public class FinalProject
     }
     public static void M2_2(Character Bulk)
     {
-        
+        out("After the HUMAN, you see another house,\n"
+                + "What to do?\n"
+                + "1. Go to the house\n"
+                + "2. Wait\n");
+        switch(menu())
+        {
+            case 1:
+                M2_3(Bulk);
+                break;
+            case 2:
+                Wait(Bulk);
+                break;
+            default:
+                out("Invalid Input\n");
+                M2_2(Bulk);
+                break;
+        }
+    }
+    public static void M2_3(Character Bulk)
+    {
+        out("With your newfound power,\n"
+                        + "you bash the front door of the house open.\n"
+                        + "Inside, you see a refrigerator. That is all.\n"
+                        + "This is a very sparse house\n"
+                        + "What do you do?\n"
+                        + "1. Devour the contents of the refrigerator\n"
+                        + "2. Go outside\n"
+                        + "3. Wait\n");
+                switch(menu())
+                {
+                    case 1:
+                        out("You eat everything in the refrigerator.\n"
+                                + "Everything. Shelves and all\n"
+                                + "Afterward, you eat the refrigertator too.\n\n"
+                                + "You feel an immense power growing inside of you\n"
+                                + "You feel... HUGE\n\n"
+                                + "With the strength of a tanker truck,\n"
+                                + "you plow through the wall of the house right into...\n"
+                                + "Oh.\n"
+                                + "Maybe you aren't as HUGE as you thought...\n");
+                        M3(Bulk);
+                        break;
+                    case 2:
+                        M2_2(Bulk);
+                        break;
+                    case 3:
+                        Wait(Bulk);
+                        break;
+                    default:
+                        out("Invalid Input\n");
+                        M2_3(Bulk);
+                        break;
+                }
     }
     public static void M3(Character Bulk)
     {
