@@ -77,15 +77,7 @@ public class Battle
         int damage = a.str/2;
         double hitRate = a.hr;
         FinalProject.out(a.name + " attacks!\n");
-        try
-        {
-            Thread.sleep(250);
-        }
-        catch(InterruptedException ex)
-        {
-            Thread.currentThread().interrupt();
-        }
-        
+        FinalProject.sleep(250);        
         if(rand.nextInt(99)+1 < (10 + hitRate - b.dex))
         {
             FinalProject.out(a.name + " strikes!\n");
@@ -93,14 +85,6 @@ public class Battle
         }
         else
             FinalProject.out(a.name + " misses!\n");
-        
-        try
-        {
-            Thread.sleep(250);
-        }
-        catch(InterruptedException ex)
-        {
-            Thread.currentThread().interrupt();
-        }
+        FinalProject.sleep(250);
     }
 }

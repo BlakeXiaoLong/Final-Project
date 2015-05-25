@@ -107,6 +107,17 @@ public class FinalProject
                 
         }
     }
+    public static void sleep(int i)
+    {
+        try
+        {
+            Thread.sleep(i);
+        }
+        catch(InterruptedException ex)
+        {
+            Thread.currentThread().interrupt();
+        }
+    }
     public static void loading()
     {
         out("\n\n\n\n\n\nYou begin as a nameless peon, weak and frail\n"
@@ -348,6 +359,7 @@ public class FinalProject
                                 + "you plow through the wall of the house right into...\n"
                                 + "Oh.\n"
                                 + "Maybe you aren't as HUGE as you thought...\n");
+                        Bulk.exp = Bulk.expToLevel(Bulk.level+1);
                         M3(Bulk);
                         break;
                     case 2:
@@ -364,7 +376,120 @@ public class FinalProject
     }
     public static void M3(Character Bulk)
     {
+        out("There is a HUGE woman here\n"
+                + "She speaks:\n"
+                + "\t'Subject Ten, why did you leave the facility?'\n"
+                + "What do you reply?\n"
+                + "1. 'Fight tha' power!'\n"
+                + "2. 'HUGE!!'\n"
+                + "3. Don't reply\n");
+        switch(menu())
+        {
+            case 1:
+                M3_1(Bulk); //TODO, make a response for this
+                break;
+            case 2:
+                M3_2(Bulk);
+                break;
+            case 3:
+                M3_3(Bulk);
+                break;
+            default:
+                out("Invalid Input\n");
+                M3(Bulk);
+                break;
+        }
+    }
+    public static void M3_1(Character Bulk) // Alex, I refer to your Gurren Lagann reference powers here
+    {
         
+    }
+    public static void M3_2(Character Bulk)
+    {
+        out("\t'Ah.'\n"
+                + "She says,\n"                
+                + "\t'You need to come with me, back to the facility'\n"
+                + "It is clear that she wants to end your quest to become HUGE,\n"
+                + "so you do the only thing you can.\n"
+                + "You fight her.\n"
+                + "To begin with, she smashes you into the air with a POWER PUNCH.\n");
+        pause(1);
+        Battle b = new Battle(Bulk, new Character("HUGE Woman", 2, 15, 5, 5, 5, 40));
+        if(!b.activate())
+            ded(Bulk);
+        out("After landing a final blow,\n"
+                + "you SMASH the woman into the city below.\n"
+                + "All this aerial combat has raised you to:\n"
+                + "HUGE Level XL!\n");
+        pause(2);
+        Bulk.exp = Bulk.expToLevel(Bulk.level+1);
+        out("The HUGE Woman lies in a crater below, you should probably\n"
+                + "aim for that.\n");
+        sleep(500);
+        out("The city shakes with the force of HUGE against HUGE!\n\n");
+        sleep(500);
+        out("Boss Defeated:\n");
+        sleep(500);
+        out("\tXP: HUGE\n");
+        pause(2);
+        
+        out("She speaks again:\n"
+                + "\t'Surely you are the MOST HUGE of us now.\n"
+                + "\tPerhaps now you can defeat our master, THE HUGEST'\n"
+                + "'Surely she jests', you think. 'There is no one HUGER than I'\n"
+                + "\t'Train well, nameless one.\n"
+                + "\tHe awaits you, at the FACILITY'\n"
+                + "'Where's that?'\n"
+                + "\t'Honestly?\n"
+                + "\tIt's the HUGE BUILDING, the one with HUGE FACILITY\n"
+                + "\twritten on it in HUGE LETTERS'\n"
+                + "'Oh yeah, how did I miss that?'"
+                + "\t'Its good that you did not swallow all of the PILLZ,\n"
+                + "\tyou should use them in a time of need'\n");
+        pause(2);
+    }
+    public static void M3_3(Character Bulk)
+    {
+        out("She continues:\n"
+                + "\t'You need to come with me, back to the facility'\n"
+                + "It is clear that she wants to end your quest to become HUGE,\n"
+                + "so you do the only thing you can.\n"
+                + "You fight her\n.\n"
+                + "To begin with, she smashes you into the air with a POWER PUNCH.\n");
+        pause(1);
+        Battle b = new Battle(Bulk, new Character("HUGE Woman", 2, 15, 5, 5, 5, 40));
+        if(!b.activate())
+            ded(Bulk);
+        out("After landing a final blow,\n"
+                + "you SMASH the woman into the city below.\n"
+                + "All this aerial combat has raised you to:\n"
+                + "HUGE Level XL!\n");
+        pause(2);
+        Bulk.exp = Bulk.expToLevel(Bulk.level+1);
+        out("The HUGE Woman lies in a crater below, you should probably\n"
+                + "aim for that.\n");
+        sleep(500);
+        out("The city shakes with the force of HUGE against HUGE!\n\n");
+        sleep(500);
+        out("Boss Defeated:\n");
+        sleep(500);
+        out("\tXP: HUGE\n");
+        pause(2);
+        
+        out("She speaks again:\n"
+                + "\t'Surely you are the MOST HUGE of us now.\n"
+                + "\tPerhaps now you can defeat our master, THE HUGEST'\n"
+                + "'Surely she jests', you think. 'There is no one HUGER than I'\n"
+                + "\t'Train well, nameless one.\n"
+                + "\tHe awaits you, at the FACILITY'\n"
+                + "'Where's that?'\n"
+                + "\t'Honestly?\n"
+                + "\tIt's the HUGE BUILDING, the one with HUGE FACILITY\n"
+                + "\twritten on it in HUGE LETTERS'\n"
+                + "'Oh yeah, how did I miss that?'"
+                + "\t'Its good that you did not swallow all of the PILLZ,\n"
+                + "\tyou should use them in a time of need'\n");
+        pause(2);
     }
     public static void M4_1(Character Bulk)
     {
