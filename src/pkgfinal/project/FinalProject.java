@@ -10,10 +10,12 @@ Here goes nothing
 
 package pkgfinal.project;
 import java.util.Scanner;
+import java.util.Random;
 public class FinalProject
 {
     static int turncounter = 0;
     static Scanner userInput = new Scanner(System.in);
+    Random rand = new Random();
     
     public static void main(String[] args)
     {
@@ -36,21 +38,74 @@ public class FinalProject
     }
     public static int menu()
     {
+        Process exitCode;
+        int response = userInput.nextInt();
+        try
+        {
+            if(System.getProperty("os.name").startsWith("Window") )
+                exitCode = Runtime.getRuntime().exec("cls");
+            else
+                exitCode = Runtime.getRuntime().exec("clear");
+        }
+        catch (Exception e)
+        {
+            for(int i = 0; i < 1000; i++)
+                System.out.println();
+        }
+        
         turncounter++;    
-        return userInput.nextInt();
+        return response;
     }    
     public static void pause(int x) // 1 eats a newline character before pausing, 2 does not
     {
         if(x == 1) userInput.nextLine();
         out("Press Enter to continue");
         userInput.nextLine();
+        Process exitCode;
+        try
+        {
+            if(System.getProperty("os.name").startsWith("Window") )
+                exitCode = Runtime.getRuntime().exec("cls");
+            else
+                exitCode = Runtime.getRuntime().exec("clear");
+        }
+        catch (Exception e)
+        {
+            for(int i = 0; i < 1000; i++)
+                System.out.println();
+        }
     }
     public static void Wait()
     {
         out("You wait.\n"
                 + "I don't know why but you do.\n"
                 + "Because I hate campers, I kill you.\n");
-    }    
+    }
+    public static void ded(Character Bulk)
+    {
+        out("LMAO\n"
+                + "U R DED\n");
+        out("Retry?\n"
+                + "1. Yes\n"
+                + "2. No\n");
+        switch(menu())
+        {
+            case 1:
+                Bulk.exp = 129;
+                Bulk.level = 1;
+                M1(Bulk);
+                break;
+            case 2:
+                System.exit(0);
+                break;
+            default:
+                out("Invalid Input\n"
+                        + "I'm gonna take that as a no.\n");
+                System.exit(0);
+                break;
+                
+        }
+    }
     public static void loading()
     {
         out("\n\n\n\n\n\nYou begin as a nameless peon, weak and frail\n"
@@ -135,7 +190,7 @@ public class FinalProject
         else if(Bulk.exp == 129)
         {
             out("You are in an empty house.\n"
-                    + "It isn't your's, you just broke in here\n"
+                    + "It isn't yours, you just broke in here\n"
                     + "to feel sorry for yourself.\n\n"
                     + "With the power of the PILLZ running though you\n"
                     + "you feel like you could do anything!\n"
@@ -152,7 +207,8 @@ public class FinalProject
                             + "With the power of a normal human being\n"
                             + "and the longevity of a small child\n"
                             + "you spend the next 90 seconds moving around the\n"
-                            + "house with the speed that would astound most snails\n");
+                            + "house with the speed that would astound most snails\n\n"
+                            + "Maybe you should have mentioned that you've never exercised");
                     Bulk.exp = 130;
                     M1(Bulk);
                     break;
@@ -187,7 +243,6 @@ public class FinalProject
                             + "Instead, you decide that leaving might be a good idea.\n"
                             + "Feeling exhausted from excercise, you slowly\n"
                             + "walk to the door and exit.\n");
-                    Bulk.exp = 131;
                     M2(Bulk);
                     break;
                 case 2:
@@ -200,7 +255,6 @@ public class FinalProject
                             + "Tending to a bruised shoulder, you\n"
                             + "decide that the door is a better\n"
                             + "idea, and make your exit.");
-                    Bulk.exp = 131;
                     M2(Bulk);
                     break;
                 case 3:
@@ -219,7 +273,39 @@ public class FinalProject
     }
     public static void M2(Character Bulk)
     {
-        out("Lmao\n");
+        out("As you exit the house, you see a HUMAN\n"
+                + "in your path.\n"
+                + "What to do?\n"
+                + "1. Fight!\n"
+                + "2. Allow him to live\n"
+                + "3. Wait\n");
+        switch(menu())
+        {
+            case 1:
+                Battle b = new Battle(Bulk, new Character("Human", 2, 30, 10, 10, 10, 65));
+                if(!b.activate())
+                    ded(Bulk);
+                out("After your intense battle with the human warrior\n"
+                        + "he falls, and you see that he is merely a child\n"
+                        + "Perhaps you should HUGE yourself more before\n"
+                        + "you try to fight again\n");
+                break;
+            case 2:
+                out("You allow him to live...\n"
+                        + "for now.\n");
+                break;
+            case 3:
+                Wait();
+                break;
+            default:
+                out("Invalid Input\n");
+                M2(Bulk);
+                break;
+        }
+    }
+    public static void M2_2(Character Bulk)
+    {
+        
     }
     public static void M3(Character Bulk)
     {

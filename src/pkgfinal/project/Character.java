@@ -27,9 +27,9 @@ public class Character
         this.level = 1;
         this.hp = rand.nextInt(16)+15;
         this.mhp = this.hp;
-        this.str = rand.nextInt(5)+30;
-        this.dex = rand.nextInt(5)+30;
-        this.con = rand.nextInt(5)+30;
+        this.str = rand.nextInt(5)+5;
+        this.dex = rand.nextInt(5)+5;
+        this.con = rand.nextInt(5)+5;
         this.exp = expToLevel(1);
         this.hr = rand.nextInt(5)+60;
     }
@@ -39,7 +39,7 @@ public class Character
      * @param level
      * @return
      */
-    private long expToLevel(long level)
+    public long expToLevel(long level)
     {
         return (128*level*level);
     }
@@ -56,28 +56,28 @@ public class Character
                     this.str += 10;
                     this.dex += 7;
                     this.con += 7;
-                    this.mhp += 7;
+                    this.mhp += 10;
                     this.hp = this.mhp;
                     break;
                 case 2:
                     this.str += 7;
                     this.dex += 10;
                     this.con += 7;
-                    this.mhp += 7;
+                    this.mhp += 10;
                     this.hp = this.mhp;
                     break;
                 case 3:
                     this.str += 7;
                     this.dex += 7;
                     this.con += 10;
-                    this.mhp += 7;
+                    this.mhp += 10;
                     this.hp = this.mhp;
                     break;
                 case 4:
                     this.str += 7;
                     this.dex += 7;
                     this.con += 7;
-                    this.mhp += 10;
+                    this.mhp += 15;
                     this.hp = this.mhp;
                     break;
                 default:
