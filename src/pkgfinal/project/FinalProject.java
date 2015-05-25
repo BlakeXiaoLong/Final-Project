@@ -42,7 +42,7 @@ public class FinalProject
         int response = userInput.nextInt();
         try
         {
-            if(System.getProperty("os.name").startsWith("Window") )
+            if(System.getProperty("os.name").startsWith("Window"))
                 exitCode = Runtime.getRuntime().exec("cls");
             else
                 exitCode = Runtime.getRuntime().exec("clear");
@@ -51,8 +51,7 @@ public class FinalProject
         {
             for(int i = 0; i < 1000; i++)
                 System.out.println();
-        }
-        
+        }        
         turncounter++;    
         return response;
     }    
@@ -129,7 +128,7 @@ public class FinalProject
                 + "... It hasn't worked out so far.\n\n"
                 + "But you can feel it.\n"
                 + "This will be day you've been waiting for\n"
-                + "This will be the day we open up the do-\n\n"
+                + "This will be the day we open up the do-\n\n" // That's 1
                 + "Wait, What's your name again?");
         userInput.nextLine(); // to eat the newline character
         if(userInput.nextLine().equals("Bulk Squatthrust"))
@@ -138,7 +137,7 @@ public class FinalProject
         {
             out("\n\n\n\n\n\nNah, that's a stupid name.\n"
                     + "You need a tough-sounding name\n"
-                    + "like Tarkus or Blake or Jaune Ar-\n"
+                    + "like Tarkus or Blake or Jaune Ar-\n" // That's 2 and 3
                     + "  wait no, that's a stupid one.\n\n"
                     + "I know!\n"
                     + "How about Bulk Squatthrust?\n"
@@ -207,7 +206,7 @@ public class FinalProject
                     + "With the power of the PILLZ running though you\n"
                     + "you feel like you could do anything!\n"
                     + "You could bench press an empty milk carton\n"
-                    + "or lift your own body weight\n"
+                    + "or even lift your own body weight\n"
                     + "What shall you do?\n"
                     + "1. Excercise like a boss\n"
                     + "2. Wait\n");
@@ -400,7 +399,7 @@ public class FinalProject
                 break;
         }
     }
-    public static void M3_1(Character Bulk) // Alex, I refer to your Gurren Lagann reference powers here
+    public static void M3_1(Character Bulk) // Alex, I defer to your Gurren Lagann reference powers here
     {
         
     }
@@ -447,6 +446,7 @@ public class FinalProject
                 + "\t'Its good that you did not swallow all of the PILLZ,\n"
                 + "\tyou should use them in a time of need'\n");
         pause(2);
+        M4(Bulk);
     }
     public static void M3_3(Character Bulk)
     {
@@ -490,54 +490,106 @@ public class FinalProject
                 + "\t'Its good that you did not swallow all of the PILLZ,\n"
                 + "\tyou should use them in a time of need'\n");
         pause(2);
+        M4(Bulk);
     }
-    public static void M4_1(Character Bulk)
-    {
-        
-    }
-    public static void M4_2(Character Bulk)
-    {
-        
-    }
-    public static void M4_3(Character Bulk)
-    {
-        
-    }
-    public static void M4_4(Character Bulk)
-    {
-        
-    }
-    public static void M4_5(Character Bulk)
-    {
-        
-    }
-    public static void M4_6(Character Bulk)
-    {
-        
-    }
-    public static void M4_7(Character Bulk)
-    {
-        
-    }
-    public static void M4_8(Character Bulk)
-    {
-        
-    }
-    public static void M4_9(Character Bulk)
+    public static void M4(Character Bulk)
     {
         
     }
     public static void M5_1(Character Bulk)
     {
-        
+        out("As you walk, you see a flash of black across the street\n" // Technically 4
+                + "What to do?\n"
+                + "1. Keep going\n"
+                + "2. Turn back\n"
+                + "3. Wait\n");
+        switch(menu())
+        {
+            case 1:
+                M5_2(Bulk);
+            case 2:
+                out("You wisely turn back\n"
+                        + "Dang psychic spies, you can never be too careful\n"); // That's 5
+                M4(Bulk);
+                break;
+            case 3:
+                Wait(Bulk);
+                break;
+            default:
+                out("Invalid Input\n");
+                M5_1(Bulk);
+                break;
+        }
     }
     public static void M5_2(Character Bulk)
     {
-        
+        out("As you walk, you see a group of GIRLS\n" // 6
+                + "with red, white, black, and yellow themes.\n"
+                + "The small red one speaks up:\n"
+                + "'Your crimes against humanity make you an enemy of\n"
+                + "the kingdom of Vale!\n\n"
+                + "Justice will be be swift!\n" // It's a specific scene, so I'm gonna count that as 7
+                + "Justice will be painful!\n"); /* It will be DELICIOUS!!!*/
+        pause(2);
+        out("You prepare your HUGE for battle as they draw their weapons and attack.\n");
+        sleep(500);
+        System.out.print(".");
+        sleep(500);
+        System.out.print(".");
+        sleep(500);
+        System.out.print(".");
+        out("Yeah, you don't even get a battle screen for this.\n"
+                + "their power level is waaay over yours.\n\n"
+                + "Rekt.\n\n");
+        ded(Bulk);
     }
     public static void M6(Character Bulk)
     {
-        
+        out("You are standing at the foot of the FACILITY,\n"
+                + "it really is HUGE.\n"
+                + "Again, you question how you never noticed this before,"
+                + "its literally the size of a small moon.\n\n"
+                + "Aaanyway, all you have to do is fight your way to the top,\n"
+                + "kill all the people, find the HUGEST\n"
+                + "and put to rest all those crazy notions of a HUGER one than you.\n\n");
+        pause(2);
+        out("As you mull over the finer points of infiltrating a skyscraper\n"
+                + "a HUGE arm bursts out of the tower and snatches a few planes\n"
+                + "Oh. Well.\n"
+                + "It's probably all perspective, right?"
+                + "Those planes he grabbed were probably just birds."
+                + "Let's get a better look.\n");
+        pause(2);
+        out("Well crap, it looks like he's about a mile tall.\n"
+                + "Looks like HUGE XXL wasn't HUGE enough.\n"
+                + "This guy is XXXL!\n"
+                + "What do I do??\n"
+                + "1. RUN!!\n"
+                + "2. Confusedly work out\n"
+                + "3. Eat buildings\n"
+                + "4. Enter the FACILITY\n"
+                + "5. Wait\n");
+        switch(menu())
+        {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                out("You go to enter the FACILITY, but as you approach the door,\n"
+                        + "the builidng topples onto you.\n\n"
+                        + "What did you think would happen?\n"
+                        + "I mean, this giant guy punches a hole in the wall,\n"
+                        + "then starts coming out of it, and you expect\n"
+                        + "the GIANT BUILDING to stay standing??\n");
+                ded(Bulk);
+            case 5:
+                Wait(Bulk);
+                break;
+            default:
+                out("Invalid Input");
+                M6(Bulk);
+                break;
+        }
     }
     public static void M7(Character Bulk)
     {
