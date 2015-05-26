@@ -1,12 +1,12 @@
 /*
-This is to be a rendition (read: port) of Huge Quest spawning from
-    the deepest parts of the 4chan board /tg/
-I am Andrew Jimenez, project codehead; Along with me on this fateful
-    adventure are Alex Osterholzer, project leader,
-    and Joshua Sloat, project somethingsomethingsomething
-        
-Here goes nothing
-*/
+ * This is to be a rendition (read: port) of Huge Quest spawning from
+ *     the deepest parts of the 4chan board /tg/
+ * I am Andrew Jimenez, project codehead; Along with me on this fateful
+ *    adventure are Alex Osterholzer, project leader,
+ *    and Joshua Sloat, project somethingsomethingsomething
+ *       
+ * Here goes nothing
+ */
 
 package pkgfinal.project;
 import java.util.Scanner;
@@ -40,7 +40,7 @@ public class FinalProject
     {
         Process exitCode;
         int response = userInput.nextInt();
-        try
+        try // clears the console upon recieving input
         {
             if(System.getProperty("os.name").startsWith("Window"))
                 exitCode = Runtime.getRuntime().exec("cls");
@@ -61,7 +61,7 @@ public class FinalProject
         out("Press Enter to continue");
         userInput.nextLine();
         Process exitCode;
-        try
+        try // clears the console upon recieving input
         {
             if(System.getProperty("os.name").startsWith("Window") )
                 exitCode = Runtime.getRuntime().exec("cls");
@@ -78,37 +78,37 @@ public class FinalProject
     {
         out("You wait.\n"
                 + "I don't know why but you do.\n"
-                + "Because I hate campers, I kill you.\n");
+                + "Because I hate campers, I kill you.\n"); // Rekt
         ded(Bulk);
     }
     public static void ded(Character Bulk)
     {
-        out("LMAO\n"
-                + "U R DED\n");
-        out("Retry?\n"
-                + "1. Yes\n"
-                + "2. No\n");
-        switch(menu())
+        while(true)
         {
-            case 1:
-                Bulk.exp = 129;
-                Bulk.level = 1;
-                M1(Bulk);
-                break;
-            case 2:
-                System.exit(0);
-                break;
-            default:
-                out("Invalid Input\n"
-                        + "So I'm gonna take that as a no.\n");
-                System.exit(0);
-                break;
-                
+            out("LMAO\n"
+                    + "U R DED\n");
+            out("Retry?\n"
+                    + "1. Yes\n"
+                    + "2. No\n");
+            switch(menu())
+            {
+                case 1:
+                    Bulk.exp = 129;
+                    Bulk.level = 1;
+                    M1(Bulk);
+                    break;
+                case 2:
+                    System.exit(0);
+                    break;
+                default:
+                    out("Invalid Input\n");
+                    break;
+            }
         }
     }
     public static void sleep(int i)
     {
-        try
+        try // Sleep() function from C++
         {
             Thread.sleep(i);
         }
@@ -404,15 +404,21 @@ public class FinalProject
         out("\tThe HUGE woman grins a HUGE grin and looks toward the ground.\n"
             + "When she looks up again she has red, V-shaped sunglasses on her face and one arm extended\n"
             + "into the air, jabbing a finger at the heavens."
-            + "'You dumbass!' she yells. 'WHO THE HELL DO YOU THINK I AM?'\n\n"
+            + "'You dumbass!' she yells. 'JUST WHO THE HELL DO YOU THINK I AM?'\n\n"
             + "At these words the woman begins to grow impossibly HUGE, her body stretching to the skies and continuing beyond.\n"
             + "'MY HUGE IS THE HUGE THAT WILL PIERCE THE HEAVENS!'\n\n"
             + "Your guts begin to churn and your sphincter loosens as you tremble before her might.\n"
             + "The ground shakes violently and as you loose your grip on reality a giant glowing drill\n"
             + "breaks through the ground beneath you. The drill rockets upwards, eviscerating you, despite your HUGE.\n\n"
             + "As your world fades to black, you think you see a mighty, blue haired man floating above you.\n"
-            + "His words reach your ears just before you lose consciousness.\n\n"
-            + "'A true man never dies ... even when he's killed.'\n");
+            + "His words reach your ears just before you lose consciousness.\n\n");
+        sleep(500);
+        System.out.print(".");
+        sleep(500);
+        System.out.print(".");
+        sleep(500);
+        System.out.print(".");
+        out("'A true man never dies ... even when he's killed.'\n");
         M3(Bulk); // I got you bro - Alex
     }
     public static void M3_2(Character Bulk)
