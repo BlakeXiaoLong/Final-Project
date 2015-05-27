@@ -40,7 +40,7 @@ public class Battle
         {
             FinalProject.out(player.name + " is victorious!\n");            
             FinalProject.pause(2);
-            player.exp+=(creature.expToLevel(creature.level)/6);
+            player.exp+=(creature.getExp(creature.level)/6);
             while(player.levelUp());
             return true;
         }

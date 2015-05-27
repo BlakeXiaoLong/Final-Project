@@ -15,7 +15,7 @@ public class FinalProject
 {
     static int turncounter = 0;
     static Scanner userInput = new Scanner(System.in);
-    static Random rand = new Random();
+    static final Random rand = new Random();
     static final int a = rand.nextInt(9)+1, s = rand.nextInt(1)+1;
     
     public static void main(String[] args)
@@ -359,7 +359,7 @@ public class FinalProject
                                 + "you plow through the wall of the house right into...\n"
                                 + "Oh.\n"
                                 + "Maybe you aren't as HUGE as you thought...\n");
-                        Bulk.exp = Bulk.expToLevel(Bulk.level+1);
+                        Bulk.exp = Bulk.getExp(Bulk.level+1);
                         M3(Bulk);
                         break;
                     case 2:
@@ -440,7 +440,7 @@ public class FinalProject
                 + "All this aerial combat has raised you to:\n"
                 + "HUGE Level XL!\n");
         pause(2);
-        Bulk.exp = Bulk.expToLevel(Bulk.level+1);
+        Bulk.exp = Bulk.getExp(Bulk.level+1);
         out("The HUGE Woman lies in a crater below, you should probably\n"
                 + "aim for that.\n");
         sleep(500);
@@ -484,7 +484,7 @@ public class FinalProject
                 + "All this aerial combat has raised you to:\n"
                 + "HUGE Level XL!\n");
         pause(2);
-        Bulk.exp = Bulk.expToLevel(Bulk.level+1);
+        Bulk.exp = Bulk.getExp(Bulk.level+1);
         out("The HUGE Woman lies in a crater below, you should probably\n"
                 + "aim for that.\n");
         sleep(500);
@@ -515,7 +515,7 @@ public class FinalProject
     {
         
     }
-    public static void M5_1(Character Bulk)
+    public static void M5(Character Bulk)
     {
         out("As you walk, you see a flash of black across the street\n" // Technically 4
                 + "What to do?\n"
@@ -525,7 +525,7 @@ public class FinalProject
         switch(menu())
         {
             case 1:
-                M5_2(Bulk);
+                M5_1(Bulk);
             case 2:
                 out("You wisely turn back\n"
                         + "Dang psychic spies, you can never be too careful\n"); // That's 5
@@ -536,11 +536,11 @@ public class FinalProject
                 break;
             default:
                 out("Invalid Input\n");
-                M5_1(Bulk);
+                M5(Bulk);
                 break;
         }
     }
-    public static void M5_2(Character Bulk)
+    public static void M5_1(Character Bulk)
     {
         out("As you walk, you see a group of GIRLS\n" // 6
                 + "with red, white, black, and yellow themes.\n"
@@ -783,7 +783,7 @@ public class FinalProject
                     out("Invalid Input\n");
                 }
     }
-    public static void M9(Character Bulk) // TODO (Heavens)
+    public static void M9(Character Bulk)
     {
         out("The former HUGEST yips at year heels, like a tiny dog.\n"
                 + "He is no longer a threat, a blithering remnant of his former self.\n"
@@ -804,7 +804,7 @@ public class FinalProject
         out("CONGRATURASHUNZ\n\n"
                 + "ATROCITIES: " + a + "/10\n"
                 + "SOCKS SAVED: " + s + "/2\n"
-                + "HUGE XP: " + Bulk.exp + "/" + Bulk.expToLevel(Bulk.level) + "\n\n"
+                + "HUGE XP: " + Bulk.exp + "/" + Bulk.getExp(Bulk.level) + "\n\n"
                 + "TURNS TAKEN: " + turncounter + "\n"
                 + "YOU WINZ\n");
     }

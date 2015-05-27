@@ -39,7 +39,7 @@ public class Character
      * @param level
      * @return
      */
-    public long expToLevel(long level)
+    private long expToLevel(long level)
     {
         return (128*level*level);
     }
@@ -86,5 +86,10 @@ public class Character
             return true;
         }
         return false;
+    }
+    
+    public long getExp(long level)
+    {
+        return expToLevel(level);
     }
 }
