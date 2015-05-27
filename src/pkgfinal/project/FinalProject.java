@@ -572,7 +572,7 @@ public class FinalProject
                 + "and put to rest all those crazy notions of a HUGER one than you.\n\n");
         pause(2);
         out("As you mull over the finer points of infiltrating a skyscraper\n"
-                + "a HUGE arm bursts out of the tower and snatches a few planes\n"
+                + "a HUGE arm bursts out of the tower and snatches a few planes.\n"
                 + "Oh. Well.\n"
                 + "It's probably all perspective, right?"
                 + "Those planes he grabbed were probably just birds."
@@ -602,9 +602,9 @@ public class FinalProject
                         + "catching it as it falls and bench pressing it as you do so.\n"
                         + "Finally, you toss the building into the air and catch\n"
                         + "it with your digestive tract.\n\n"
-                        + "RIP building\n\n");
+                        + "R.I.P. building\n\n");
                 pause(2);
-                out("As you continue to ranpage across the city, eating buildings\n"
+                out("As you continue to rampage across the city, eating buildings\n"
                         + "and working out at the same time,\n"
                         + "the HUGEST manages to work his way out of the FACILITY,"
                         + "knocking it over in the process.\n");
@@ -617,22 +617,11 @@ public class FinalProject
                         + "which is kind of ironic... you know\n");
                 pause(2);
                 out("The HUGEST yells out,\n"
-                        + "\t'I see you have grown HUGE, SUBJECT TEN'\n"
+                        + "\t'I SEE YOU HAVE GROWN HUGE, SUBJECT TEN'\n"
                         + "Wow, even his words are HUGE.\n"
-                        + "What do you respond?\n"
-                        + "1. HUGE!!!\n"
-                        + "2. I will defeat you!!!"
-                        + "3. My name is Bulk F. Squatthrust!\n"
-                            + "\tAnd I. HATE. TAXES!\n" // I've lost count
-                        + "4. Wait\n");
-                if(menu() == 3)
-                    out("\tAh... OK?\n");
-                out("The HUGEST responds:\n"
-                        + "'At lasy, you have returned;\n"
-                        + "My son!\n\n");
+                        + "'AT LAST, YOU HAVE RETURNED;\n"
+                        + "MY SON!\n\n"); // CAPPPPS LOCK!!
                 pause(2);
-                out("Well, I mean, I think you were adopted or something.\n"
-                        + "Anyway, LETS FIGHT!!! (queue boss music)\n");
                 M8(Bulk);
                 break;                
             case 4:
@@ -657,9 +646,141 @@ public class FinalProject
     {
         
     }
-    public static void M8(Character Bulk) // TODO (HUGEST's skull)
+    public static void M8(Character Bulk)
     {
-        
+        Battle b = new Battle(Bulk, new Character("HUGEST", 4, 61, 36, 36, 36, 45));
+                out("WELL, I MEAN, I THINK YOU WERE ADOPTED OR SOMETHING.\n"
+                        + "Anyway, LETS FIGHT!!! (queue boss music)\n");
+                while(true)
+                {
+                    out("What do you want to do?\n"
+                            + "1. Fight head on\n"
+                            + "2. Jump up and introduce your HUGE FIST to\n"
+                            + "\this HUGE TEETH\n"
+                            + "3. Wait\n");
+                    switch(menu())
+                    {
+                        case 1: // Your funeral
+                            if(!b.activate())
+                                ded(Bulk);
+                            break;
+                        case 2:
+                            out("Great idea!\n");
+                            pause(2);
+                            out("As you leap into the air, poised to strike,\n"
+                                    + "you meet the HUGEST's fist with a thump and you\n"
+                                    + "quickly smash back into the ground.\n"
+                                    + "Ouch.\n"
+                                    + "Maybe that wasn't such a good idea.\n");
+                            while(true)
+                            {
+                                out("What now?\n"
+                                        + "1. Fight head on\n"
+                                        + "2. Climb his arm and beat him up\n"
+                                        + "3. Wait\n");
+                                switch(menu())
+                                {
+                                    case 1: // Your funeral
+                                        if(!b.activate())
+                                            ded(Bulk);
+                                        break;
+                                    case 2:
+                                        out("You climb up one of the HUGEST's massive arms,\n"
+                                                + "every mole and wart becoming painfully clear.\n"
+                                                + "\t'You really need to go see a dermatologist'\n"
+                                                + "you yell as the HUGEST tries and fails to swat you off.\n"
+                                                + "When you reach his face, you have to shield your eyes\n"
+                                                + "from the sheer glory of his moustache.\n");
+                                        pause(2);
+                                        out("Punching him on the face seems to be completely ineffective\n"
+                                                + "other than the fact that the HUGEST keeps slapping himself\n"
+                                                + "while trying to hit you.\n");
+                                        while(true)
+                                        {
+                                            out("Hwhat now?\n"
+                                                    + "1. Keep going!\n"
+                                                    + "2. Try alternate methods\n"
+                                                    + "3. Wait\n");
+                                            switch(menu())
+                                            {
+                                                case 2:
+                                                    out("You try for something different,\n"
+                                                            + "jumping inside the HUGEST's nostril\n"
+                                                            + "and going deeper, chuggin' the rest of the PILLZ\n"
+                                                            + "as you go\n");
+                                                    pause(2);
+                                                    out("Once inside, you find that you are sorely dissapointed.\n"
+                                                            + "The HUGEST's brain is no bigger than your FIST\n");
+                                                    while(true)
+                                                    {
+                                                        out("What now?"
+                                                                + "1. Eat it\n"
+                                                                + "2. Wait\n");
+                                                        switch(menu())
+                                                        {
+                                                            case 1:
+                                                                out("I hear it tastes just like eggs.\n"
+                                                                        + "As you take a HUGE bite, you hear the HUGEST begin to\n"
+                                                                        + "derp massively."
+                                                                        + "When you lean in for another bite, you feel the PILLZ\n"
+                                                                        + "take effect and through some combination of the\n"
+                                                                        + "PILLZ and cannibalism, you vomit inside the HUGEST's skull,\n"
+                                                                        + "propelling yourself out in the process.\n"
+                                                                        + "In the air, you feel yourself begin to change...\n");
+                                                                sleep(250);
+                                                                out("I've become...\n");
+                                                                sleep(250);
+                                                                out("I've become...!\n");
+                                                                sleep(250);
+                                                                out("Final Form: SUPA KAWAII!\n");
+                                                                M9(Bulk);
+                                                                break;
+                                                            case 2:
+                                                                out("You wait.\n"
+                                                                        + "Finally, the PILLZ take effect and you feel yourself\n"
+                                                                        + "about to puke.\n"
+                                                                        + "You aim yourself toward the exit, and hurl violently,\n"
+                                                                        + "forcing yourself out of the Hugest's skull and into his\n"
+                                                                        + "waiting hand, where you are immediately crushed.\n");
+                                                                ded(Bulk);
+                                                                break;
+                                                        }
+                                                        out("Invalid Input\n");
+                                                    }
+                                                case 1: // basically the same as 3
+                                                    out("You keep trying to beat the HUGEST up,\n"
+                                                            + "which is clearly doing nothing.\n");
+                                                case 3:
+                                                    out("You end up waiting,\n"
+                                                            + "and the HUGEST finally manages to land a hit\n"
+                                                            + "on you, destroying your everything.\n");
+                                                    ded(Bulk);
+                                                    break;
+                                            }
+                                            out("Invalid Input");
+                                        }
+                                    case 3:
+                                        out("You're in the middle of a battle with someone who could\n"
+                                                + "stand up to Tengen Toppa Gurren Lagann.\n"
+                                                + "Why in the world would you wait??\n");
+                                        pause(2);
+                                        out("The HUGEST's FIST mashes you into the ground\n");
+                                        ded(Bulk);
+                                        break;
+                                }
+                                out("Invalid Input\n");
+                            }
+                        case 3:
+                            out("You're in the middle of a battle with someone who could\n"
+                                    + "stand up to Tengen Toppa Gurren Lagann.\n"
+                                    + "Why in the world would you wait??\n");
+                            pause(2);
+                            out("The HUGEST's FIST mashes you into the ground\n");
+                            ded(Bulk);
+                            break;
+                    }
+                    out("Invalid Input\n");
+                }
     }
     public static void M9(Character Bulk) // TODO (Heavens)
     {
