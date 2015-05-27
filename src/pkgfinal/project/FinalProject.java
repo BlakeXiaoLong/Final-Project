@@ -15,7 +15,8 @@ public class FinalProject
 {
     static int turncounter = 0;
     static Scanner userInput = new Scanner(System.in);
-    Random rand = new Random();
+    static Random rand = new Random();
+    static final int a = rand.nextInt(9)+1, s = rand.nextInt(1)+1;
     
     public static void main(String[] args)
     {
@@ -784,10 +785,27 @@ public class FinalProject
     }
     public static void M9(Character Bulk) // TODO (Heavens)
     {
-        
-    }
-    public static void M10(Character Bulk) // TODO (Universe)
-    {
-        
+        out("The former HUGEST yips at year heels, like a tiny dog.\n"
+                + "He is no longer a threat, a blithering remnant of his former self.\n"
+                + "It take a mere kick to send him through the moon and into the SUN\n"
+                + "at near the SPEED OF LIGHT,\n\n"
+                + "for you have BECOME HUGE,\n"
+                + "the PERFECT HUGE.\n");
+        pause(2);
+        out("You no problem consuming the entire Earth, then other planets.\n"
+                + "Soon, only STARS can sate your hunger.\n"
+                + "As days pass, you gain the knowledge of billions of civilizations,\n"
+                + "all consumed by your HUGE.\n"
+                + "As you are now capable of consuming whole GALAXIES,\n"
+                + "you realize that you are the HUGE that the HUGE WOMAN\n"
+                + "from so long ago spoke of,\n"
+                + "the HUGE that would PIERCE THE HEAVENS.\n");
+        pause(2);
+        out("CONGRATURASHUNZ\n\n"
+                + "ATROCITIES: " + a + "/10\n"
+                + "SOCKS SAVED: " + s + "/2\n"
+                + "HUGE XP: " + Bulk.exp + "/" + Bulk.expToLevel(Bulk.level) + "\n\n"
+                + "TURNS TAKEN: " + turncounter + "\n"
+                + "YOU WINZ\n");
     }
 }
