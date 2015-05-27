@@ -510,7 +510,7 @@ public class FinalProject
         pause(2);
         M4(Bulk);
     }
-    public static void M4(Character Bulk)
+    public static void M4(Character Bulk) // TODO
     {
         
     }
@@ -590,8 +590,51 @@ public class FinalProject
         switch(menu())
         {
             case 1:
-            case 2:
+                out("You run as fast as your MASSIVE FRAME allows you,\n"
+                        + "but it isn't fast enough\n"
+                        + "as the glory of the HUGEST's moustache is enough to\n"
+                        + "erase you and the rest of the world from existence.\n");
+                ded(Bulk);
+                break;
+            case 2: // Same as Case 3                
             case 3:
+                out("You run over to the nearest building and punch it over,\n"
+                        + "catching it as it falls and bench pressing it as you do so.\n"
+                        + "Finally, you toss the building into the air and catch\n"
+                        + "it with your digestive tract.\n\n"
+                        + "RIP building\n\n");
+                pause(2);
+                out("As you continue to ranpage across the city, eating buildings\n"
+                        + "and working out at the same time,\n"
+                        + "the HUGEST manages to work his way out of the FACILITY,"
+                        + "knocking it over in the process.\n");
+                pause(2);
+                out("The city is basically destroyed.\n"
+                        + "I mean, a tower the size of a continent just fell on it.\n"
+                        + "Oh well.\n"
+                        + "You yell out to the HUGEST,\n"
+                        + "\t'I won't let you hurt any more of these people!'\n"
+                        + "which is kind of ironic... you know\n");
+                pause(2);
+                out("The HUGEST yells out,\n"
+                        + "\t'I see you have grown HUGE, SUBJECT TEN'\n"
+                        + "Wow, even his words are HUGE.\n"
+                        + "What do you respond?\n"
+                        + "1. HUGE!!!\n"
+                        + "2. I will defeat you!!!"
+                        + "3. My name is Bulk F. Squatthrust!\n"
+                            + "\tAnd I. HATE. TAXES!\n" // I've lost count
+                        + "4. Wait\n");
+                if(menu() == 3)
+                    out("\tAh... OK?\n");
+                out("The HUGEST responds:\n"
+                        + "'At lasy, you have returned;\n"
+                        + "My son!\n\n");
+                pause(2);
+                out("Well, I mean, I think you were adopted or something.\n"
+                        + "Anyway, LETS FIGHT!!! (queue boss music)\n");
+                M8(Bulk);
+                break;                
             case 4:
                 out("You go to enter the FACILITY, but as you approach the door,\n"
                         + "the builidng topples onto you.\n\n"
@@ -600,6 +643,7 @@ public class FinalProject
                         + "then starts coming out of it, and you expect\n"
                         + "the GIANT BUILDING to stay standing??\n");
                 ded(Bulk);
+                break;
             case 5:
                 Wait(Bulk);
                 break;
@@ -609,19 +653,19 @@ public class FinalProject
                 break;
         }
     }
-    public static void M7(Character Bulk)
+    public static void M7(Character Bulk) // TODO (Facility), actually maybe not. Time will tell
     {
         
     }
-    public static void M8(Character Bulk)
+    public static void M8(Character Bulk) // TODO (HUGEST's skull)
     {
         
     }
-    public static void M9(Character Bulk)
+    public static void M9(Character Bulk) // TODO (Heavens)
     {
         
     }
-    public static void M10(Character Bulk)
+    public static void M10(Character Bulk) // TODO (Universe)
     {
         
     }
