@@ -787,12 +787,12 @@ public class FinalProject
     {
         out("The former HUGEST yips at year heels, like a tiny dog.\n"
                 + "He is no longer a threat, a blithering remnant of his former self.\n"
-                + "It take a mere kick to send him through the moon and into the SUN\n"
+                + "It takes a mere kick to send him through the moon and into the SUN\n"
                 + "at near the SPEED OF LIGHT,\n\n"
                 + "for you have BECOME HUGE,\n"
                 + "the PERFECT HUGE.\n");
         pause(2);
-        out("You no problem consuming the entire Earth, then other planets.\n"
+        out("You have no problem consuming the entire Earth, then other planets.\n"
                 + "Soon, only STARS can sate your hunger.\n"
                 + "As days pass, you gain the knowledge of billions of civilizations,\n"
                 + "all consumed by your HUGE.\n"
